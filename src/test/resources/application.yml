@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:mysql://neordinary.c3ii8igyekx1.eu-north-1.rds.amazonaws.com:3306/neordinary
+    username: admin
+    password: neordinary!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    sql:
+      init:
+        platform: mysql
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+#        show_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
